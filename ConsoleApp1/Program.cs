@@ -13,6 +13,12 @@ namespace ConsoleApp1
             Console.Write(query + ": ");
             return Console.ReadLine();
         }
+
+        static float ReadFloat(string query)
+        {
+            return float.Parse(ReadInput(query));
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world");
@@ -21,8 +27,8 @@ namespace ConsoleApp1
             {
                 try
                 {
-                    rectangle.Width = float.Parse(ReadInput("Width"));
-                    rectangle.Height = float.Parse(ReadInput("Height"));
+                    rectangle.Width = ReadFloat("Width");
+                    rectangle.Height = ReadFloat("Height");
                     Console.WriteLine("The area of the rectangle is " + rectangle.Area);
                     break;
                 }
